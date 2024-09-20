@@ -4,16 +4,12 @@
 
 export function getNumbersWithSquareRoots(max) {
   // Your code goes here...
-  var iterContainer = [];
-  for (var i = 0; i <= max; i ++) {
-    if (Number.isInteger(Math.sqrt(i))) {
-      iterContainer.push(i);
-    }
+  let iterArray = [];
+  for (let i = 0; i * i <= max; i++) {
+    iterArray.push(i * i);
   }
-  return iterContainer;
+  return iterArray;
 }
-
-console.log(getNumbersWithSquareRoots(30));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-2"

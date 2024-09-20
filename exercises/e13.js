@@ -12,19 +12,18 @@
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   
   let zeroToTwoThousand = [];
-  let sum = 0;
 
-  for (let i in array) {
-    if (array[i].deposits) {
-      for(let j in array[i].deposits) {
-        sum += array[i].deposits[j];
+  for (let user of array) {
+    let sum = 0;
+    if (user.deposits) {
+      for(let amount of user.deposits) {
+        sum += amount;
       }
       if (sum >= 0 && sum < 2000) {
-        zeroToTwoThousand.push(array[i]);
+        zeroToTwoThousand.push(user);
       }
-      sum -= sum;
     } else {
-      zeroToTwoThousand.push(array[i]);
+      zeroToTwoThousand.push(user);
     }
   }
 

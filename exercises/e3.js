@@ -9,7 +9,6 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
   let sum = 0;
   for (let i in array) {
     sum += array[i];
@@ -17,7 +16,6 @@ export function getAverage(array) {
   return sum / array.length;
 }
 
-console.log(getAverage([22, 45, 4, 65]));
 
 /** 
  * PART 2
@@ -27,7 +25,6 @@ console.log(getAverage([22, 45, 4, 65]));
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
   if (!str.length) return 0;
   var sum = 0;
   for (var i in str) {
@@ -37,9 +34,6 @@ export function getStringSum(str) {
   }
   return sum;
 }
-
-console.log(getStringSum('GH2U87A'));
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"

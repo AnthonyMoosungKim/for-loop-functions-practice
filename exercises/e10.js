@@ -5,13 +5,9 @@
 
 export function getClientsWithLetterInName(array, letter) {
   // Your code goes here...
-
-  // 1. Create an array for the results.
   let bankAccountNames = [];
   
-  // 2. Create an iteration for the given array.
   for (let x in array) {
-    //3. Create an iteration for all given array.name
     for (let y in array[x].name) {
       if (letter.toLowerCase() == array[x].name[y].toLowerCase()) {
         bankAccountNames.push(array[x].name);

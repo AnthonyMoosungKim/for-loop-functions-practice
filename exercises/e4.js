@@ -5,7 +5,7 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
-  let lowest = Infinity;
+  let lowest = array[0];
   for (let i in array) {
     if (array[i] < lowest) {
       lowest = array[i];
@@ -16,7 +16,7 @@ export function findMinValueInArray(array) {
 
 export function findMaxValueInArray(array) {
   // Your code goes here...
-  let highest = -Infinity;
+  let highest = array[0];
   for (let i in array) {
     if (array[i] > highest) {
       highest = array[i];

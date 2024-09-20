@@ -9,10 +9,10 @@ export function separateNamesWithAFromRest(array) {
   // Your code goes here...
   let arrayWithA = [];
   let arrayWithoutA = [];
-  let combinedArray = [];
-  let hasA = false;
+  
 
   for (let i in array) {
+    let hasA = false;
     for (let j in array[i]) {
       if (array[i][j] === 'a') {
         hasA = true;
@@ -20,15 +20,12 @@ export function separateNamesWithAFromRest(array) {
     }
     if (hasA) {
       arrayWithA.push(array[i]);
-      hasA = false;
     } else {
       arrayWithoutA.push(array[i]);
     }
   }
-  combinedArray.push(arrayWithA);
-  combinedArray.push(arrayWithoutA);
   
-  return combinedArray;
+  return [arrayWithA, arrayWithoutA];
 }
 
 console.log(separateNamesWithAFromRest(["jon", "alice", "andrew", "mark", "jimmy"]));

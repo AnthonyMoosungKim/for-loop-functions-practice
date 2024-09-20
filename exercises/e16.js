@@ -9,16 +9,13 @@ export function flatArrays(array) {
   // Your code goes here...
   let flatFinished = [];
 
-  for (let i in array) {
-    for (let j in array[i]) {
-      flatFinished.push(array[i][j]);
+  for (let index of array) {
+    for (let letter of index) {
+      flatFinished.push(letter);
     }
   }
   return flatFinished;
 }
-
-console.log(flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]));
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-16"

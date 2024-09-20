@@ -9,8 +9,8 @@ export function doesArrayInclude(array, value) {
   // Your code goes here...
   let include = false;
 
-  for (let i in array) {
-    if (array[i] === value) {
+  for (let letter of array) {
+    if (letter === value) {
       include = true;
     }
   }
