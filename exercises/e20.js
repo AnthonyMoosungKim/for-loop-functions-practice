@@ -7,9 +7,31 @@
 
 export function separateNamesWithAFromRest(array) {
   // Your code goes here...
+  let arrayWithA = [];
+  let arrayWithoutA = [];
+  let combinedArray = [];
+  let hasA = false;
 
+  for (let i in array) {
+    for (let j in array[i]) {
+      if (array[i][j] === 'a') {
+        hasA = true;
+      }
+    }
+    if (hasA) {
+      arrayWithA.push(array[i]);
+      hasA = false;
+    } else {
+      arrayWithoutA.push(array[i]);
+    }
+  }
+  combinedArray.push(arrayWithA);
+  combinedArray.push(arrayWithoutA);
+  
+  return combinedArray;
 }
 
+console.log(separateNamesWithAFromRest(["jon", "alice", "andrew", "mark", "jimmy"]));
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-20"

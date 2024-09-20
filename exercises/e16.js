@@ -7,9 +7,17 @@
 
 export function flatArrays(array) {
   // Your code goes here...
+  let flatFinished = [];
 
+  for (let i in array) {
+    for (let j in array[i]) {
+      flatFinished.push(array[i][j]);
+    }
+  }
+  return flatFinished;
 }
 
+console.log(flatArrays([['d', 'r'], 'z', 'b', ['f', 'y']]));
 
 
 // === TEST YOURSELF ===

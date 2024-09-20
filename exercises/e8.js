@@ -6,10 +6,21 @@
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...
-
+  let highestAccount = []
+  let highest = -Infinity
+  
+  for (let i in array) {
+    // If the balance is higher than the current highest; RUN
+    if (array[i].balance > highest) {
+      // Replaces negative infinity each loop with current highest balance.
+      highest = array[i].balance;
+      // Places current Array object in the placeholder for highest account.
+      highestAccount = [array[i]];
+    }
+  }
+  // After the for loop is finished, return the current highestAccount.
+  return highestAccount;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"
